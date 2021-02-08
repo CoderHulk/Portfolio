@@ -23,8 +23,8 @@
     "tachyon": "^0.0.11"
   },
   "scripts": {
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "yarn run",
+    "deploy": "gh-pages -d run",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
