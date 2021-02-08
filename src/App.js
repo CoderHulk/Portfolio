@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Particles from 'react-particles-js';
+import Main from './containers/Main';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 200,
+      density: {
+        enable: true,
+        value_area: 1800,
+      },
+    },
+    line_linked: {
+      shadow: {
+        enable: true,
+        color: "#d5008f",
+        blur: 5
+      }
+    },
+  },
+};
+
+class App extends Component {
+  render() {
+    return (
+      <div className='App'>
+        <Particles className='particles' params={particlesOptions} />
+        <div>
+          <Main />
+          
+
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
